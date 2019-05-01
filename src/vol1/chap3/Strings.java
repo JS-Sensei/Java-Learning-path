@@ -25,6 +25,19 @@ public class Strings {
         String all = String.join(" / ", "S", "M", "L", "XL");
         System.out.println("The sizes we offer for our Clothings: " + all);
 
+        //Testing Strings for Equality
+        "Hello".equals(greeting); //true
+        String tmpStr = "Not Hello!";
+        tmpStr.equals(greeting); // false
+        "hello".equalsIgnoreCase("HeLlO");
+
+        //Building Strings
+        StringBuilder builder = new StringBuilder();
+        builder.append('c');
+        builder.append("oucou");
+        String resultString = builder.toString();
+        System.out.println("A string built with a String Builder: "+ resultString); //coucou
+
 
     }
 }

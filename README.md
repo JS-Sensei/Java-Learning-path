@@ -15,9 +15,16 @@ describes a code unit in the **UTF-16** encoding.
 it has two values `false` and `true` it is used for evaluating logical conditions. You cannot convert between integers
 and boolean values. 
 
-**Integer division** by o raises an **exception**, whereas **floating-point** division by 0 yields an infinite or 
+**Integer division** by 0 raises an **exception**, whereas **floating-point** division by 0 yields an infinite or 
 NaN result.
 
 #### Strings are immutable
 You cannot change the individual Characters in a Java string. Objects of the String class are immutable. But you can
 change the content of the String variable containing a String Object.
+##### The Explanation as to why Strings are immutable: 
+the compiler can arrange that **strings** are _shared_. Imagine various strings sitting in a common pool. String 
+variables then point to locations in the pool. If you copy a string variable, both the original and the copy share
+the same characters and hence point to the same location in that pool. Overall, the designers of Java decided that
+the efficiency of Sharing outweighs the inefficiency of string editing by substrings and concatenating. 
+
+Do not use the **==** operator to test whether two strings are equal!

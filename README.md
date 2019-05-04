@@ -28,3 +28,24 @@ the same characters and hence point to the same location in that pool. Overall, 
 the efficiency of Sharing outweighs the inefficiency of string editing by substrings and concatenating. 
 
 Do not use the **==** operator to test whether two strings are equal!
+
+#### Arrays
+If you frequently need to expand the size of an array while your program is running, you should 
+use a different data structure called **array list**.   
+In the following code: 
+```java
+for(int element : a) {
+    // code    
+    
+}
+
+```
+the **element** variable traverses the elements of the array and **not the index values**!!
+
+##### Array initializers and Anonymous Arrays
+We can create Array Object and supply initial values:
+`int[] smallPrimes = { 2, 3, 5, 7, 11 }`  
+It is even possible to initialize an anonymous array:
+`new int[] {2, 4, 6, 8, 10 }`. Constructing an array of length 0: 
+`int[] a = new int[0]`. Note that an array of length 0 is not the same as **null**(which 
+means that the variable expects an object but has not been assigned one yet).

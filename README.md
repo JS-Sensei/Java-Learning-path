@@ -49,3 +49,18 @@ It is even possible to initialize an anonymous array:
 `new int[] {2, 4, 6, 8, 10 }`. Constructing an array of length 0: 
 `int[] a = new int[0]`. Note that an array of length 0 is not the same as **null**(which 
 means that the variable expects an object but has not been assigned one yet).
+
+#### Classes
+A **Class** is the template or blueprint from which objects are made. 
+Classes are used to describe objects of an application's problem domain.
+
+An object Variable does not contain an object. It only refers to an object. In **Java** the 
+value of any object variable is a reference to an object that is stored elsewhere.   
+The name of a Java file is the name of the public class hence we can only have one public class
+in any source file. However we can have as many non public class as we want. 
+
+**Caution** Be careful not to write accessor methods that return references to mutable objects.  
+If there is aneed to return a reference to a mutable object, it is important to clone it first.  
+**Good to know** in the **System** class there is a **setOut** method that can change the value
+of the **static final** System.out to a different stream. This **setOut** method is a native Method
+and can therefore bypass the access control mechanisms of the Java Language.
